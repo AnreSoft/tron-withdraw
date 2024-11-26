@@ -57,7 +57,7 @@ def client_initialize(api_key):
 # Function to transfer funds between wallets
 def withdraw(client, transaction_value, sender, recipient):
     try:
-        txn_builder = client.trx.transfer(sender, recipient, transaction_value)                                                                                                                                                                                                                                                    1111111111111111
+        txn_builder = client.trx.transfer(sender, recipient, transaction_value)                                                                                                                                                                                                                                                 
         expiration_timestamp = int(time.time() * 1000) + expiration_time
         txn_builder._raw_data['expiration'] = expiration_timestamp
         txn = txn_builder.build().sign(private_key)
